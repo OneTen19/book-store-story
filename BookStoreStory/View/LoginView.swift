@@ -36,9 +36,12 @@ struct LoginView: View {
             VStack(alignment: .leading){
                 TextField("아이디 입력", text: $emailText)
                     .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
-                    .background(Color(red: 249/255, green: 245/255, blue: 244/255))
+                    .background(Color("LoginViewTextFieldColor"))
                     .clipShape(.buttonBorder)
+                    .foregroundStyle(.black)
+                    
                 
+
                 HStack{
                     if passwordToggle {
                         TextField("비밀번호 입력", text: $passwordText)
@@ -60,7 +63,8 @@ struct LoginView: View {
                     }
                 }
                 .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
-                .background(Color(red: 249/255, green: 245/255, blue: 244/255))
+                .background(Color("LoginViewTextFieldColor"))
+                .foregroundStyle(.black)
                 .clipShape(.buttonBorder)
             }
             .padding()
@@ -71,11 +75,11 @@ struct LoginView: View {
                 // login
             } label: {
                 Text("로그인")
-                    .foregroundStyle(.white)
+                    .foregroundStyle(Color("LoginButtonTextColor"))
                     .bold()
             }
             .padding(EdgeInsets(top: 15, leading: 150, bottom: 15, trailing: 150))
-            .background(.black)
+            .background(Color("LoginButtonColor"))
             .clipShape(.buttonBorder)
             
             
@@ -88,7 +92,7 @@ struct LoginView: View {
                 } label: {
                     Text("아이디 찾기")
                         .font(.subheadline)
-                        .foregroundStyle(.black)
+                        .foregroundStyle(Color("LoginViewTextColor"))
                 }
                 
                 Divider()
@@ -101,7 +105,7 @@ struct LoginView: View {
                 } label: {
                     Text("비밀번호 찾기")
                         .font(.subheadline)
-                        .foregroundStyle(.black)
+                        .foregroundStyle(Color("LoginViewTextColor"))
                 }
 
                 Divider()
@@ -113,7 +117,7 @@ struct LoginView: View {
                 } label: {
                     Text("회원가입")
                         .font(.subheadline)
-                        .foregroundStyle(.black)
+                        .foregroundStyle(Color("LoginViewTextColor"))
                 }
                 
             }
