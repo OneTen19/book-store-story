@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SignUpView: View {
+struct NickNameView: View {
     @State var nickName: String = ""
     @State var gender: String = "남자"
     @State var age: String = "19세 이하"
@@ -21,7 +21,7 @@ struct SignUpView: View {
                 
                 // 닉네임
                 VStack(alignment: .leading){
-                    Text("1")
+                    Text("3")
                         .padding()
                         .background(.brown)
                         .clipShape(Circle())
@@ -56,7 +56,7 @@ struct SignUpView: View {
                 
                 // 성별
                 VStack(alignment: .leading){
-                    Text("2")
+                    Text("4")
                         .padding()
                         .background(.brown)
                         .clipShape(Circle())
@@ -89,7 +89,7 @@ struct SignUpView: View {
                 
                 // 나이
                 VStack(alignment: .leading){
-                    Text("3")
+                    Text("5")
                         .padding()
                         .background(.brown)
                         .clipShape(Circle())
@@ -132,7 +132,8 @@ struct SignUpView: View {
                 .padding(EdgeInsets(top: 15, leading: 150, bottom: 15, trailing: 150))
                 .background(.brown)
                 .clipShape(.buttonBorder)
-
+                
+                
                 
             }
         }
@@ -142,6 +143,6 @@ struct SignUpView: View {
 }
 
 #Preview {
-    SignUpView()
+    NickNameView()
 }
 

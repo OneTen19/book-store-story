@@ -88,7 +88,7 @@ struct LoginView: View {
                 HStack{
                     
                     // 아이디 찾기
-                    NavigationLink(destination: SignUpView()) {
+                    NavigationLink(destination: EmailView()) {
                         Text("아이디 찾기")
                             .font(.subheadline)
                             .foregroundStyle(Color("LoginViewTextColor"))
@@ -100,7 +100,7 @@ struct LoginView: View {
                     
                     
                     // 비밀번호 찾기
-                    NavigationLink(destination: SignUpView()) {
+                    NavigationLink(destination: EmailView()) {
                         Text("비밀번호 찾기")
                             .font(.subheadline)
                             .foregroundStyle(Color("LoginViewTextColor"))
@@ -111,7 +111,7 @@ struct LoginView: View {
                         .background(Color("LoginViewTextColor"))
                     
                     // 회원가입
-                    NavigationLink(destination: SignUpView()) {
+                    NavigationLink(destination: EmailView()) {
                         Text("회원가입")
                             .font(.subheadline)
                             .foregroundStyle(Color("LoginViewTextColor"))
