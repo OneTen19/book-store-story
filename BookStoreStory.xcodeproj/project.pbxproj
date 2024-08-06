@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C1B76592C61B48B002253F7 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B76582C61B48B002253F7 /* EmailView.swift */; };
+		6C1B765B2C61B4FE002253F7 /* EmailViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B765A2C61B4FE002253F7 /* EmailViewViewModel.swift */; };
+		6C5A291C2C60891500E0B8BC /* NickNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5A291B2C60891500E0B8BC /* NickNameView.swift */; };
+		6C5A291E2C60892400E0B8BC /* NickNameViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5A291D2C60892400E0B8BC /* NickNameViewViewModel.swift */; };
+		6C5A29212C60AC5900E0B8BC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5A29202C60AC5900E0B8BC /* Extensions.swift */; };
 		6CA08A742C5C650000840BDA /* BookStoreStoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA08A732C5C650000840BDA /* BookStoreStoryApp.swift */; };
 		6CA08A762C5C650000840BDA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA08A752C5C650000840BDA /* MainView.swift */; };
 		6CA08A782C5C650100840BDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CA08A772C5C650100840BDA /* Assets.xcassets */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C1B76582C61B48B002253F7 /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
+		6C1B765A2C61B4FE002253F7 /* EmailViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewViewModel.swift; sourceTree = "<group>"; };
+		6C5A291B2C60891500E0B8BC /* NickNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameView.swift; sourceTree = "<group>"; };
+		6C5A291D2C60892400E0B8BC /* NickNameViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameViewViewModel.swift; sourceTree = "<group>"; };
+		6C5A29202C60AC5900E0B8BC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		6CA08A702C5C650000840BDA /* BookStoreStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStoreStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CA08A732C5C650000840BDA /* BookStoreStoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreStoryApp.swift; sourceTree = "<group>"; };
 		6CA08A752C5C650000840BDA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -38,6 +48,93 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C5675542C61AF1000FE03A3 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				6C56755B2C61AF8B00FE03A3 /* SignUp */,
+				6C5675582C61AF6C00FE03A3 /* Login */,
+				6C5675552C61AF4800FE03A3 /* Main */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		6C5675552C61AF4800FE03A3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6C5675562C61AF5300FE03A3 /* View */,
+				6C5675572C61AF5C00FE03A3 /* ViewModel */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		6C5675562C61AF5300FE03A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6CA08A752C5C650000840BDA /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6C5675572C61AF5C00FE03A3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6CC4B6972C5C95240074934D /* MainViewViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6C5675582C61AF6C00FE03A3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6C5675592C61AF7600FE03A3 /* View */,
+				6C56755A2C61AF7C00FE03A3 /* ViewModel */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		6C5675592C61AF7600FE03A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6CC4B6992C5C9DE70074934D /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6C56755A2C61AF7C00FE03A3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6CC4B69B2C5C9DF60074934D /* LoginViewViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		6C56755B2C61AF8B00FE03A3 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				6C56755C2C61AF9500FE03A3 /* View */,
+				6C56755D2C61AF9900FE03A3 /* ViewModel */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		6C56755C2C61AF9500FE03A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6C1B76582C61B48B002253F7 /* EmailView.swift */,
+				6C5A291B2C60891500E0B8BC /* NickNameView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6C56755D2C61AF9900FE03A3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6C1B765A2C61B4FE002253F7 /* EmailViewViewModel.swift */,
+				6C5A291D2C60892400E0B8BC /* NickNameViewViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		6CA08A672C5C650000840BDA = {
 			isa = PBXGroup;
 			children = (
@@ -59,9 +156,7 @@
 			children = (
 				6CC4B6962C5C94BC0074934D /* Other */,
 				6CC4B6952C5C75BD0074934D /* Resources */,
-				6CC4B6932C5C75890074934D /* Model */,
-				6CC4B6922C5C756F0074934D /* View */,
-				6CC4B6942C5C75900074934D /* ViewModel */,
+				6C5675542C61AF1000FE03A3 /* Presentation */,
 				6CA08A792C5C650100840BDA /* Preview Content */,
 			);
 			path = BookStoreStory;
@@ -73,31 +168,6 @@
 				6CA08A7A2C5C650100840BDA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		6CC4B6922C5C756F0074934D /* View */ = {
-			isa = PBXGroup;
-			children = (
-				6CA08A752C5C650000840BDA /* MainView.swift */,
-				6CC4B6992C5C9DE70074934D /* LoginView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		6CC4B6932C5C75890074934D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		6CC4B6942C5C75900074934D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				6CC4B6972C5C95240074934D /* MainViewViewModel.swift */,
-				6CC4B69B2C5C9DF60074934D /* LoginViewViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		6CC4B6952C5C75BD0074934D /* Resources */ = {
@@ -112,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				6CA08A732C5C650000840BDA /* BookStoreStoryApp.swift */,
+				6C5A29202C60AC5900E0B8BC /* Extensions.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -188,8 +259,13 @@
 			files = (
 				6CC4B69C2C5C9DF60074934D /* LoginViewViewModel.swift in Sources */,
 				6CA08A762C5C650000840BDA /* MainView.swift in Sources */,
+				6C1B76592C61B48B002253F7 /* EmailView.swift in Sources */,
 				6CA08A742C5C650000840BDA /* BookStoreStoryApp.swift in Sources */,
+				6C5A29212C60AC5900E0B8BC /* Extensions.swift in Sources */,
 				6CC4B69A2C5C9DE70074934D /* LoginView.swift in Sources */,
+				6C5A291C2C60891500E0B8BC /* NickNameView.swift in Sources */,
+				6C5A291E2C60892400E0B8BC /* NickNameViewViewModel.swift in Sources */,
+				6C1B765B2C61B4FE002253F7 /* EmailViewViewModel.swift in Sources */,
 				6CC4B6982C5C95240074934D /* MainViewViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
