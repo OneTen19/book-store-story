@@ -32,9 +32,9 @@ struct EmailView: View {
                     
                     TextField("이메일 입력", text: $email)
                         .padding()
-                        .background(.white)
+                        .background(Color("SignUpTextFieldColor"))
                         .clipShape(.buttonBorder)
-                        .foregroundStyle(.black)
+                        .foregroundStyle(Color("SignUpTextColor"))
                         .bold()
                         .shadow(radius: 2)
                 }
@@ -64,6 +64,7 @@ struct EmailView: View {
                             }
                         } else {
                             SecureField("비밀번호 입력", text: $password)
+                            
                             Button {
                                 passwordToggle.toggle()
                             } label: {
@@ -74,9 +75,9 @@ struct EmailView: View {
                         }
                     }
                     .padding()
-                    .background(.white)
+                    .background(Color("SignUpTextFieldColor"))
                     .clipShape(.buttonBorder)
-                    .foregroundStyle(.black)
+                    .foregroundStyle(Color("SignUpTextColor"))
                     .bold()
                     .shadow(radius: 2)
                     
@@ -88,9 +89,9 @@ struct EmailView: View {
                     
                     SecureField("다시 한 번 입력해주세요", text: $passwordCheck)
                         .padding()
-                        .background(.white)
+                        .background(Color("SignUpTextFieldColor"))
                         .clipShape(.buttonBorder)
-                        .foregroundStyle(.black)
+                        .foregroundStyle(Color("SignUpTextColor"))
                         .bold()
                         .shadow(radius: 2)
                     
