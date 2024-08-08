@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State var emailText: String = ""
-    @State var passwordText: String = ""
-    @State var passwordToggle: Bool = false
+    @StateObject var viewModel = LoginViewViewModel()
     
     var body: some View {
-        NavigationStack {
+        
+        NavigationStack() {
             VStack{
                 
                 // logo
@@ -35,7 +34,7 @@ struct LoginView: View {
                 
                 // email & password
                 VStack(alignment: .leading){
-                    TextField("아이디 입력", text: $emailText)
+                    TextField("아이디 입력", text: $viewModel.emailText)
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
                         .background(Color("LoginViewTextFieldColor"))
                         .clipShape(.buttonBorder)
@@ -44,18 +43,18 @@ struct LoginView: View {
                     
                     
                     HStack{
-                        if passwordToggle {
-                            TextField("비밀번호 입력", text: $passwordText)
+                        if viewModel.passwordToggle {
+                            TextField("비밀번호 입력", text: $viewModel.passwordText)
                             Button {
-                                passwordToggle.toggle()
+                                viewModel.passwordToggle.toggle()
                             } label: {
                                 Image(systemName: "eye")
                                     .padding(.trailing)
                             }
                         } else {
-                            SecureField("비밀번호 입력", text: $passwordText)
+                            SecureField("비밀번호 입력", text: $viewModel.passwordText)
                             Button {
-                                passwordToggle.toggle()
+                                viewModel.passwordToggle.toggle()
                             } label: {
                                 Image(systemName: "eye.slash")
                                     .padding(.trailing)
@@ -94,28 +93,28 @@ struct LoginView: View {
                             .foregroundStyle(Color("LoginViewTextColor"))
                     }
                     
-                    Divider()
-                        .frame(height: 20)
-                        .background(Color("LoginViewTextColor"))
-                    
-                    
-                    // 비밀번호 찾기
-                    NavigationLink(destination: EmailView()) {
-                        Text("비밀번호 찾기")
-                            .font(.subheadline)
-                            .foregroundStyle(Color("LoginViewTextColor"))
-                    }
-                    
-                    Divider()
-                        .frame(height: 20)
-                        .background(Color("LoginViewTextColor"))
-                    
-                    // 회원가입
-                    NavigationLink(destination: EmailView()) {
-                        Text("회원가입")
-                            .font(.subheadline)
-                            .foregroundStyle(Color("LoginViewTextColor"))
-                    }
+//                    Divider()
+//                        .frame(height: 20)
+//                        .background(Color("LoginViewTextColor"))
+//                    
+//                    
+//                    // 비밀번호 찾기
+//                    NavigationLink(destination: EmailView()) {
+//                        Text("비밀번호 찾기")
+//                            .font(.subheadline)
+//                            .foregroundStyle(Color("LoginViewTextColor"))
+//                    }
+//                    
+//                    Divider()
+//                        .frame(height: 20)
+//                        .background(Color("LoginViewTextColor"))
+//                    
+//                    // 회원가입
+//                    NavigationLink(destination: EmailView()) {
+//                        Text("회원가입")
+//                            .font(.subheadline)
+//                            .foregroundStyle(Color("LoginViewTextColor"))
+//                    }
                     
                 }
                 .padding()
@@ -186,6 +185,7 @@ struct LoginView: View {
                 
             }
             .padding()
+
         }
         
     }

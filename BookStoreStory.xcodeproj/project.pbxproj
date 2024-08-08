@@ -11,6 +11,9 @@
 		6C1B765B2C61B4FE002253F7 /* EmailViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B765A2C61B4FE002253F7 /* EmailViewViewModel.swift */; };
 		6C1B765D2C61C529002253F7 /* TastePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B765C2C61C529002253F7 /* TastePickerView.swift */; };
 		6C1B765F2C61C536002253F7 /* TastePickerViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B765E2C61C536002253F7 /* TastePickerViewViewModel.swift */; };
+		6C1BC29D2C64976C00880B0E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1BC29C2C64976C00880B0E /* User.swift */; };
+		6C1F8BC72C6317C9009C317E /* SignUpCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1F8BC62C6317C9009C317E /* SignUpCompleteView.swift */; };
+		6C1F8BC92C6317D7009C317E /* SignUpCompleateViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1F8BC82C6317D7009C317E /* SignUpCompleateViewViewModel.swift */; };
 		6C5A291C2C60891500E0B8BC /* NickNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5A291B2C60891500E0B8BC /* NickNameView.swift */; };
 		6C5A291E2C60892400E0B8BC /* NickNameViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5A291D2C60892400E0B8BC /* NickNameViewViewModel.swift */; };
 		6C5A29212C60AC5900E0B8BC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5A29202C60AC5900E0B8BC /* Extensions.swift */; };
@@ -28,6 +31,9 @@
 		6C1B765A2C61B4FE002253F7 /* EmailViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewViewModel.swift; sourceTree = "<group>"; };
 		6C1B765C2C61C529002253F7 /* TastePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastePickerView.swift; sourceTree = "<group>"; };
 		6C1B765E2C61C536002253F7 /* TastePickerViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastePickerViewViewModel.swift; sourceTree = "<group>"; };
+		6C1BC29C2C64976C00880B0E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6C1F8BC62C6317C9009C317E /* SignUpCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCompleteView.swift; sourceTree = "<group>"; };
+		6C1F8BC82C6317D7009C317E /* SignUpCompleateViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCompleateViewViewModel.swift; sourceTree = "<group>"; };
 		6C5A291B2C60891500E0B8BC /* NickNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameView.swift; sourceTree = "<group>"; };
 		6C5A291D2C60892400E0B8BC /* NickNameViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameViewViewModel.swift; sourceTree = "<group>"; };
 		6C5A29202C60AC5900E0B8BC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -52,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C1BC29B2C64975600880B0E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6C1BC29C2C64976C00880B0E /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		6C5675542C61AF1000FE03A3 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +141,7 @@
 				6C1B76582C61B48B002253F7 /* EmailView.swift */,
 				6C5A291B2C60891500E0B8BC /* NickNameView.swift */,
 				6C1B765C2C61C529002253F7 /* TastePickerView.swift */,
+				6C1F8BC62C6317C9009C317E /* SignUpCompleteView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -137,6 +152,7 @@
 				6C1B765A2C61B4FE002253F7 /* EmailViewViewModel.swift */,
 				6C5A291D2C60892400E0B8BC /* NickNameViewViewModel.swift */,
 				6C1B765E2C61C536002253F7 /* TastePickerViewViewModel.swift */,
+				6C1F8BC82C6317D7009C317E /* SignUpCompleateViewViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -162,6 +178,7 @@
 			children = (
 				6CC4B6962C5C94BC0074934D /* Other */,
 				6CC4B6952C5C75BD0074934D /* Resources */,
+				6C1BC29B2C64975600880B0E /* Models */,
 				6C5675542C61AF1000FE03A3 /* Presentation */,
 				6CA08A792C5C650100840BDA /* Preview Content */,
 			);
@@ -263,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C1F8BC92C6317D7009C317E /* SignUpCompleateViewViewModel.swift in Sources */,
 				6CC4B69C2C5C9DF60074934D /* LoginViewViewModel.swift in Sources */,
 				6CA08A762C5C650000840BDA /* MainView.swift in Sources */,
 				6C1B765D2C61C529002253F7 /* TastePickerView.swift in Sources */,
@@ -270,10 +288,12 @@
 				6CA08A742C5C650000840BDA /* BookStoreStoryApp.swift in Sources */,
 				6C5A29212C60AC5900E0B8BC /* Extensions.swift in Sources */,
 				6CC4B69A2C5C9DE70074934D /* LoginView.swift in Sources */,
+				6C1F8BC72C6317C9009C317E /* SignUpCompleteView.swift in Sources */,
 				6C5A291C2C60891500E0B8BC /* NickNameView.swift in Sources */,
 				6C5A291E2C60892400E0B8BC /* NickNameViewViewModel.swift in Sources */,
 				6C1B765B2C61B4FE002253F7 /* EmailViewViewModel.swift in Sources */,
 				6CC4B6982C5C95240074934D /* MainViewViewModel.swift in Sources */,
+				6C1BC29D2C64976C00880B0E /* User.swift in Sources */,
 				6C1B765F2C61C536002253F7 /* TastePickerViewViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct NickNameView: View {
+
+    
     @State var nickName: String = ""
     @State var gender: String = "남자"
     @State var age: String = "19세 이하"
@@ -16,7 +18,6 @@ struct NickNameView: View {
     let ageRanges = ["19세 이하", "20~24세", "25~29세", "30~34세", "35~40세", "41세 이상"]
     
     var body: some View {
-        NavigationStack {
             ScrollView{
                 VStack{
                     
@@ -136,11 +137,11 @@ struct NickNameView: View {
                     
                     
                 }
+
             }
-        }
-        
-        
+            
     }
+    
 }
 
 #Preview {
