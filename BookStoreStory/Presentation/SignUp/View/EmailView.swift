@@ -8,10 +8,7 @@
 import SwiftUI
 
 struct EmailView: View {
-    @State var email: String = ""
-    @State var password: String = ""
-    @State var passwordCheck: String = ""
-    @State var passwordToggle: Bool = false
+    @StateObject var viewModel = EmailViewViewModel()
     
     var body: some View {
         NavigationStack {
@@ -30,7 +27,7 @@ struct EmailView: View {
                         .bold()
                     
                     
-                    TextField("이메일 입력", text: $email)
+                    TextField("이메일 입력", text: $viewModel.email)
                         .padding()
                         .background(Color("SignUpTextFieldColor"))
                         .clipShape(.buttonBorder)
@@ -54,19 +51,19 @@ struct EmailView: View {
                         .bold()
                     
                     HStack{
-                        if passwordToggle {
-                            TextField("비밀번호 입력", text: $password)
+                        if viewModel.passwordToggle {
+                            TextField("비밀번호 입력", text: $viewModel.password)
                             Button {
-                                passwordToggle.toggle()
+                                viewModel.passwordToggle.toggle()
                             } label: {
                                 Image(systemName: "eye")
                                     .padding(.trailing)
                             }
                         } else {
-                            SecureField("비밀번호 입력", text: $password)
+                            SecureField("비밀번호 입력", text: $viewModel.password)
                             
                             Button {
-                                passwordToggle.toggle()
+                                viewModel.passwordToggle.toggle()
                             } label: {
                                 Image(systemName: "eye.slash")
                                     .padding(.trailing)
@@ -87,7 +84,7 @@ struct EmailView: View {
                         .bold()
                         .padding(.top, 10)
                     
-                    SecureField("다시 한 번 입력해주세요", text: $passwordCheck)
+                    SecureField("다시 한 번 입력해주세요", text: $viewModel.passwordCheck)
                         .padding()
                         .background(Color("SignUpTextFieldColor"))
                         .clipShape(.buttonBorder)
@@ -114,10 +111,9 @@ struct EmailView: View {
                     
                 }
                 
-                
-                
             }
         }
+        
     }
 }
 

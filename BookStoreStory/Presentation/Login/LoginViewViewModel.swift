@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+class LoginViewViewModel: ObservableObject {
+    @Published var emailText: String = ""
+    @Published var passwordText: String = ""
+    @Published var passwordToggle: Bool = false
+    
+    init() {}
+    
+    
+    
+    
+    
+}
