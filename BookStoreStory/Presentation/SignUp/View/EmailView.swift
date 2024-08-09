@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EmailView: View {
-
+    
     @StateObject var viewModel = EmailViewViewModel()
     
     var body: some View {
@@ -114,8 +114,7 @@ struct EmailView: View {
 
                 
             }
-        
-        
+            
     }
 }
 

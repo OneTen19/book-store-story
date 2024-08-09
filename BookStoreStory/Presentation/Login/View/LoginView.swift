@@ -9,11 +9,13 @@ import SwiftUI
 
 struct LoginView: View {
     
+    @State var path: NavigationPath = .init()
+    
     @StateObject var viewModel = LoginViewViewModel()
     
     var body: some View {
         
-        NavigationStack{
+        NavigationStack(path: $path){
             VStack{
                 
                 // logo
@@ -95,7 +97,7 @@ struct LoginView: View {
                             .font(.subheadline)
                             .foregroundStyle(Color("LoginViewTextColor"))
                     }
-
+                    
                     Divider()
                         .frame(height: 20)
                         .background(Color("LoginViewTextColor"))
@@ -109,7 +111,7 @@ struct LoginView: View {
                             .font(.subheadline)
                             .foregroundStyle(Color("LoginViewTextColor"))
                     }
-
+                    
                     Divider()
                         .frame(height: 20)
                         .background(Color("LoginViewTextColor"))
@@ -122,7 +124,7 @@ struct LoginView: View {
                             .font(.subheadline)
                             .foregroundStyle(Color("LoginViewTextColor"))
                     }
-
+                    
                     
                     
                 }
@@ -195,6 +197,7 @@ struct LoginView: View {
             }
             .padding()
         }
+        .navigationBarBackButtonHidden()
         
     }
 }
