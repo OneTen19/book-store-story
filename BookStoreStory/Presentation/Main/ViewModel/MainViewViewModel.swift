@@ -8,5 +8,5 @@
 import Foundation
 
 class MainViewViewModel : ObservableObject {
-    
+    @Published var page: Int = 1
 }

@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct LoginView: View {
+    
     @StateObject var viewModel = LoginViewViewModel()
     
     var body: some View {
         
-        NavigationStack() {
+        NavigationStack{
             VStack{
                 
                 // logo
@@ -87,34 +88,42 @@ struct LoginView: View {
                 HStack{
                     
                     // 아이디 찾기
-                    NavigationLink(destination: EmailView()) {
+                    NavigationLink {
+                        EmailView()
+                    } label: {
                         Text("아이디 찾기")
                             .font(.subheadline)
                             .foregroundStyle(Color("LoginViewTextColor"))
                     }
+
+                    Divider()
+                        .frame(height: 20)
+                        .background(Color("LoginViewTextColor"))
                     
-//                    Divider()
-//                        .frame(height: 20)
-//                        .background(Color("LoginViewTextColor"))
-//                    
-//                    
-//                    // 비밀번호 찾기
-//                    NavigationLink(destination: EmailView()) {
-//                        Text("비밀번호 찾기")
-//                            .font(.subheadline)
-//                            .foregroundStyle(Color("LoginViewTextColor"))
-//                    }
-//                    
-//                    Divider()
-//                        .frame(height: 20)
-//                        .background(Color("LoginViewTextColor"))
-//                    
-//                    // 회원가입
-//                    NavigationLink(destination: EmailView()) {
-//                        Text("회원가입")
-//                            .font(.subheadline)
-//                            .foregroundStyle(Color("LoginViewTextColor"))
-//                    }
+                    
+                    // 비밀번호 찾기
+                    NavigationLink {
+                        EmailView()
+                    } label: {
+                        Text("비밀번호 찾기")
+                            .font(.subheadline)
+                            .foregroundStyle(Color("LoginViewTextColor"))
+                    }
+
+                    Divider()
+                        .frame(height: 20)
+                        .background(Color("LoginViewTextColor"))
+                    
+                    // 회원가입
+                    NavigationLink {
+                        EmailView()
+                    } label: {
+                        Text("회원가입")
+                            .font(.subheadline)
+                            .foregroundStyle(Color("LoginViewTextColor"))
+                    }
+
+                    
                     
                 }
                 .padding()
@@ -185,7 +194,6 @@ struct LoginView: View {
                 
             }
             .padding()
-
         }
         
     }
@@ -194,3 +202,4 @@ struct LoginView: View {
 #Preview {
     LoginView()
 }
+

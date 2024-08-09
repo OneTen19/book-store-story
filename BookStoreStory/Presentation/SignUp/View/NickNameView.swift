@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct NickNameView: View {
-
     
     @State var nickName: String = ""
     @State var gender: String = "남자"
@@ -124,14 +123,15 @@ struct NickNameView: View {
                     
                     
                     // 다음 버튼
-                    NavigationLink(destination: TastePickerView()) {
+                    NavigationLink {
+                        TastePickerView()
+                    } label: {
                         Text("다음")
                             .foregroundStyle(.white)
                             .bold()
                             .padding(EdgeInsets(top: 15, leading: 150, bottom: 15, trailing: 150))
                             .background(.brown)
                             .clipShape(.buttonBorder)
-                        
                     }
                     
                     

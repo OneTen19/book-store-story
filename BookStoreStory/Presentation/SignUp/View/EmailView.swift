@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct EmailView: View {
+
     @StateObject var viewModel = EmailViewViewModel()
     
     var body: some View {
-        NavigationStack {
+        
             VStack{
                 
                 // 이메일
@@ -99,20 +100,21 @@ struct EmailView: View {
                 
                 Spacer()
                 
-                
                 // 다음 버튼
-                NavigationLink(destination: NickNameView()) {
+                NavigationLink {
+                    NickNameView()
+                } label: {
                     Text("다음")
                         .foregroundStyle(.white)
                         .bold()
                         .padding(EdgeInsets(top: 15, leading: 150, bottom: 15, trailing: 150))
                         .background(.brown)
                         .clipShape(.buttonBorder)
-                    
                 }
+
                 
             }
-        }
+        
         
     }
 }
@@ -120,3 +122,4 @@ struct EmailView: View {
 #Preview {
     EmailView()
 }
+
