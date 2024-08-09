@@ -13,8 +13,8 @@ struct EmailView: View {
     
     var body: some View {
         
-            VStack{
-                
+        VStack{
+
                 // 이메일
                 VStack(alignment: .leading){
                     Text("1")
@@ -112,9 +112,10 @@ struct EmailView: View {
                         .clipShape(.buttonBorder)
                 }
 
+
                 
             }
-            
+            .navigationBarBackButtonHidden()
     }
 }
 
