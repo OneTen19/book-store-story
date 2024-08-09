@@ -69,6 +69,9 @@
 		6C5675542C61AF1000FE03A3 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				6CBAE6D32C65BBEE004956D1 /* Home */,
+				6CBAE6D22C65BBD4004956D1 /* SearchPassword */,
+				6CBAE6D12C65BBC7004956D1 /* SearchEmail */,
 				6C56755B2C61AF8B00FE03A3 /* SignUp */,
 				6C5675582C61AF6C00FE03A3 /* Login */,
 				6C5675552C61AF4800FE03A3 /* Main */,
@@ -191,6 +194,75 @@
 				6CA08A7A2C5C650100840BDA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6CBAE6D12C65BBC7004956D1 /* SearchEmail */ = {
+			isa = PBXGroup;
+			children = (
+				6CBAE6D52C65BC21004956D1 /* View */,
+				6CBAE6D42C65BC02004956D1 /* ViewModel */,
+			);
+			path = SearchEmail;
+			sourceTree = "<group>";
+		};
+		6CBAE6D22C65BBD4004956D1 /* SearchPassword */ = {
+			isa = PBXGroup;
+			children = (
+				6CBAE6D72C65BC32004956D1 /* View */,
+				6CBAE6D62C65BC2E004956D1 /* ViewModel */,
+			);
+			path = SearchPassword;
+			sourceTree = "<group>";
+		};
+		6CBAE6D32C65BBEE004956D1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6CBAE6D92C65BC3A004956D1 /* View */,
+				6CBAE6D82C65BC36004956D1 /* ViewModel */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6CBAE6D42C65BC02004956D1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6CBAE6D52C65BC21004956D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6CBAE6D62C65BC2E004956D1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6CBAE6D72C65BC32004956D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6CBAE6D82C65BC36004956D1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6CBAE6D92C65BC3A004956D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		6CC4B6952C5C75BD0074934D /* Resources */ = {

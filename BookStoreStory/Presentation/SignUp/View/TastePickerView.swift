@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct TastePickerView: View {
+
     @StateObject var viewModel = TastePickerViewViewModel()
     
     var body: some View {
-        NavigationStack{
+        
             ScrollView {
                 VStack(alignment: .leading){
                     Text("6")
@@ -57,28 +58,22 @@ struct TastePickerView: View {
                 }
                 .padding()
                 .padding(.bottom, 20)
-                
-                Button {
-                    //
-                } label: {
-                    Text("삭제")
-                }
 
-                
                 // 다음 버튼
-                NavigationLink(destination: SignUpCompleteView()) {
+                NavigationLink {
+                    SignUpCompleteView()
+                } label: {
                     Text("다음")
                         .foregroundStyle(.white)
                         .bold()
                         .padding(EdgeInsets(top: 15, leading: 150, bottom: 15, trailing: 150))
                         .background(.brown)
                         .clipShape(.buttonBorder)
-                    
                 }
                 
                 
             }
-        }
+        
         
     }
 }
@@ -87,3 +82,4 @@ struct TastePickerView: View {
 #Preview {
     TastePickerView()
 }
+
