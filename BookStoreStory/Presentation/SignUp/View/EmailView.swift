@@ -12,7 +12,6 @@ struct EmailView: View {
     @StateObject var viewModel = EmailViewViewModel()
     
     var body: some View {
-        
         ScrollView {
             VStack{
                 
@@ -132,8 +131,9 @@ struct EmailView: View {
                 Spacer()
                 
                 // 다음 버튼
-                NavigationLink {
-                    NickNameView()
+                Button {
+                    viewModel.next()
+                    viewModel.nextButtonTapped = true
                 } label: {
                     Text("다음")
                         .foregroundStyle(.white)
@@ -142,11 +142,16 @@ struct EmailView: View {
                         .background(.brown)
                         .clipShape(.buttonBorder)
                 }
+                .navigationDestination(isPresented: $viewModel.nextButtonTapped) {
+                    NickNameView()
+                }
+                
                 
                 
             }
             
         }
+        
         
     }
 }

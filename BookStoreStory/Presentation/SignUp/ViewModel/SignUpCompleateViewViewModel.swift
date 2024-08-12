@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+class SignUpCompleateViewViewModel: ObservableObject {
+    @Published var endButtonTapped = false
+
+    
+    init() {}
+    
+    func next() {
+        //
+    }
+    
+}

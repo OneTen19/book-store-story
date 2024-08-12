@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SignUpCompleteView: View {
     
+    @StateObject var viewModel = SignUpCompleateViewViewModel()
+    
     var body: some View {
         
         VStack{
@@ -47,17 +49,23 @@ struct SignUpCompleteView: View {
             
             Spacer()
             
-            NavigationLink {
-                LoginView()
+            // 종료 버튼 - 여기서 유저 정보를 보낼지 이 전 단계에서 보낼 지 흠... 여기서 보내자
+            Button {
+                viewModel.next()
+                viewModel.endButtonTapped = true
             } label: {
-                // 회원가입 종료
-                Text("확인")
+                Text("다음")
                     .foregroundStyle(.white)
                     .bold()
                     .padding(EdgeInsets(top: 15, leading: 150, bottom: 15, trailing: 150))
                     .background(.brown)
                     .clipShape(.buttonBorder)
             }
+            .navigationDestination(isPresented: $viewModel.endButtonTapped) {
+                LoginView()
+            }
+            
+            
         }
         .navigationBarBackButtonHidden()
     }
