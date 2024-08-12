@@ -8,5 +8,16 @@
 import Foundation
 
 class MainViewViewModel : ObservableObject {
-    @Published var page: Int = 1
+    @Published var stateToggle: Bool = false
+    
+    public var isSignedIn: Bool {
+        return stateToggle
+        
+//        return Auth.auth().currentUser != nil
+    }
+    
+    func toggle() {
+        stateToggle.toggle()
+    }
+    
 }

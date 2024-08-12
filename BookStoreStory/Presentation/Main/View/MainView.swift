@@ -13,8 +13,11 @@ struct MainView: View {
     
     var body: some View {
         
-        LoginView()
-
+        if viewModel.isSignedIn {
+            HomeView()
+        } else {
+            LoginView()
+        }
         
     }
 }
