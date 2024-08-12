@@ -6,9 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
 
 class LoginViewViewModel: ObservableObject {
-    @Published var viewNumber: Int = 0
+    @Published var path: NavigationPath = .init()
+
+    @Published var searchEmailButtonTapped = false
+    @Published var searchPasswordButtonTapped = false
+    @Published var signUpButtonTapped = false
     
     @Published var email: String = ""
     @Published var password: String = ""

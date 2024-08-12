@@ -8,6 +8,8 @@
 import Foundation
 
 class EmailViewViewModel: ObservableObject {
+    @Published var nextButtonTapped = false
+    
     @Published var name: String = ""
     @Published var email: String = ""
     @Published var password: String = ""
@@ -19,7 +21,7 @@ class EmailViewViewModel: ObservableObject {
     
     
     func next() {
-        print("qwe")
+        //
     }
     
     

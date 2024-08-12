@@ -60,8 +60,9 @@ struct TastePickerView: View {
             .padding(.bottom, 20)
             
             // 다음 버튼
-            NavigationLink {
-                SignUpCompleteView()
+            Button {
+                viewModel.next()
+                viewModel.nextButtonTapped = true
             } label: {
                 Text("다음")
                     .foregroundStyle(.white)
@@ -69,6 +70,9 @@ struct TastePickerView: View {
                     .padding(EdgeInsets(top: 15, leading: 150, bottom: 15, trailing: 150))
                     .background(.brown)
                     .clipShape(.buttonBorder)
+            }
+            .navigationDestination(isPresented: $viewModel.nextButtonTapped) {
+                SignUpCompleteView()
             }
             
             
