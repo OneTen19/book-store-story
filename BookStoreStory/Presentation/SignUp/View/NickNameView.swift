@@ -22,7 +22,7 @@ struct NickNameView: View {
                 
                 // 닉네임
                 VStack(alignment: .leading){
-                    Text("3")
+                    Text("4")
                         .padding()
                         .background(.brown)
                         .clipShape(Circle())
@@ -57,7 +57,7 @@ struct NickNameView: View {
                 
                 // 성별
                 VStack(alignment: .leading){
-                    Text("4")
+                    Text("5")
                         .padding()
                         .background(.brown)
                         .clipShape(Circle())
@@ -90,7 +90,7 @@ struct NickNameView: View {
                 
                 // 나이
                 VStack(alignment: .leading){
-                    Text("5")
+                    Text("6")
                         .padding()
                         .background(.brown)
                         .clipShape(Circle())

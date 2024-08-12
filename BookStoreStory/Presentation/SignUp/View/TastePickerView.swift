@@ -15,7 +15,7 @@ struct TastePickerView: View {
         
         ScrollView {
             VStack(alignment: .leading){
-                Text("6")
+                Text("7")
                     .padding()
                     .background(.brown)
                     .clipShape(Circle())

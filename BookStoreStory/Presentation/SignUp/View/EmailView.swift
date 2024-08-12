@@ -13,11 +13,38 @@ struct EmailView: View {
     
     var body: some View {
         
-        VStack{
-
-                // 이메일
+        ScrollView {
+            VStack{
+                
+                // 이름
                 VStack(alignment: .leading){
                     Text("1")
+                        .padding()
+                        .background(.brown)
+                        .clipShape(Circle())
+                        .foregroundStyle(.white)
+                    
+                    Text("이름을 알려주세요!")
+                        .font(.title2)
+                        .bold()
+                    
+                    
+                    TextField("이름 입력", text: $viewModel.name)
+                        .padding()
+                        .background(Color("SignUpTextFieldColor"))
+                        .clipShape(.buttonBorder)
+                        .foregroundStyle(Color("SignUpTextColor"))
+                        .bold()
+                        .shadow(radius: 2)
+                        .textInputAutocapitalization(TextInputAutocapitalization(.none))
+                    
+                }
+                .padding()
+                
+                
+                // 이메일
+                VStack(alignment: .leading){
+                    Text("2")
                         .padding()
                         .background(.brown)
                         .clipShape(Circle())
@@ -35,13 +62,14 @@ struct EmailView: View {
                         .foregroundStyle(Color("SignUpTextColor"))
                         .bold()
                         .shadow(radius: 2)
+                        .textInputAutocapitalization(TextInputAutocapitalization(.none))
                 }
                 .padding()
                 
                 
                 // 비밀번호
                 VStack(alignment: .leading){
-                    Text("2")
+                    Text("3")
                         .padding()
                         .background(.brown)
                         .clipShape(Circle())
@@ -78,6 +106,7 @@ struct EmailView: View {
                     .foregroundStyle(Color("SignUpTextColor"))
                     .bold()
                     .shadow(radius: 2)
+                    .textInputAutocapitalization(TextInputAutocapitalization(.none))
                     
                     
                     Text("비밀번호를 확인해주세요!")
@@ -92,10 +121,12 @@ struct EmailView: View {
                         .foregroundStyle(Color("SignUpTextColor"))
                         .bold()
                         .shadow(radius: 2)
+                        .textInputAutocapitalization(TextInputAutocapitalization(.none))
                     
                     
                 }
                 .padding()
+                .padding(.bottom, 30)
                 
                 
                 Spacer()
@@ -111,11 +142,12 @@ struct EmailView: View {
                         .background(.brown)
                         .clipShape(.buttonBorder)
                 }
-
-
+                
                 
             }
-            .navigationBarBackButtonHidden()
+            
+        }
+        
     }
 }
 
