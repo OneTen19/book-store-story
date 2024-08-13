@@ -115,11 +115,16 @@ struct NickNameView: View {
                 .padding()
                 .padding(.bottom, 20)
                 
+                // 경고창
+                if !viewModel.errorMessage.isEmpty {
+                    Text(viewModel.errorMessage)
+                        .foregroundStyle(Color.red)
+                }
+                
                 
                 // 다음 버튼
                 Button {
                     viewModel.next()
-                    viewModel.nextButtonTapped = true
                 } label: {
                     Text("다음")
                         .foregroundStyle(.white)

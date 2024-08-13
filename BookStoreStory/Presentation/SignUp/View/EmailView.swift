@@ -135,6 +135,8 @@ struct EmailView: View {
                 
                 Spacer()
                 
+                
+                // 경고창
                 if !viewModel.errorMessage.isEmpty {
                     Text(viewModel.errorMessage)
                         .foregroundStyle(Color.red)

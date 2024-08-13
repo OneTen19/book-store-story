@@ -37,6 +37,7 @@ struct LoginView: View {
                 // email & password
                 VStack(alignment: .leading){
                     
+                    // 경고창
                     if !viewModel.errorMessage.isEmpty {
                         Text(viewModel.errorMessage)
                             .foregroundStyle(Color.red)
