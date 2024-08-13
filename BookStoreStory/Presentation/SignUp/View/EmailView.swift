@@ -62,6 +62,8 @@ struct EmailView: View {
                         .bold()
                         .shadow(radius: 2)
                         .textInputAutocapitalization(TextInputAutocapitalization(.none))
+
+                    
                 }
                 .padding()
                 
@@ -105,6 +107,7 @@ struct EmailView: View {
                     .foregroundStyle(Color("SignUpTextColor"))
                     .bold()
                     .shadow(radius: 2)
+                    .textContentType(.newPassword)
                     .textInputAutocapitalization(TextInputAutocapitalization(.none))
                     
                     
@@ -120,8 +123,10 @@ struct EmailView: View {
                         .foregroundStyle(Color("SignUpTextColor"))
                         .bold()
                         .shadow(radius: 2)
+                        .textContentType(.newPassword)
                         .textInputAutocapitalization(TextInputAutocapitalization(.none))
                     
+
                     
                 }
                 .padding()
@@ -130,10 +135,16 @@ struct EmailView: View {
                 
                 Spacer()
                 
+                
+                // 경고창
+                if !viewModel.errorMessage.isEmpty {
+                    Text(viewModel.errorMessage)
+                        .foregroundStyle(Color.red)
+                }
+                
                 // 다음 버튼
                 Button {
                     viewModel.next()
-                    viewModel.nextButtonTapped = true
                 } label: {
                     Text("다음")
                         .foregroundStyle(.white)
