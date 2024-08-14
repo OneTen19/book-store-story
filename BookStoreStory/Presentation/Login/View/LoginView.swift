@@ -13,7 +13,7 @@ struct LoginView: View {
     
     var body: some View {
         
-        NavigationStack(path: $viewModel.path) {
+        NavigationStack {
             VStack{
                 
                 // logo

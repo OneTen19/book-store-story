@@ -6,12 +6,9 @@
 //
 
 import Foundation
-import SwiftUI
 import FirebaseAuth
 
 class LoginViewViewModel: ObservableObject {
-    @Published var path: NavigationPath = .init()
-
     @Published var searchEmailButtonTapped = false
     @Published var searchPasswordButtonTapped = false
     @Published var signUpButtonTapped = false
@@ -30,6 +27,8 @@ class LoginViewViewModel: ObservableObject {
         
         // Try Log In
         Auth.auth().signIn(withEmail: email, password: password)
+        
+        
     }
     
     
