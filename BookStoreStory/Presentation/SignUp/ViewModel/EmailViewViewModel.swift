@@ -49,7 +49,7 @@ class EmailViewViewModel: ObservableObject {
         }
         
         
-        guard password == passwordCheck else {
+        guard password == passwordCheck && password.count >= 6 else {
             errorMessage = "비밀번호를 다시 확인해주세요"
             
             return false
