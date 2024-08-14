@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct User: Identifiable {
-    let id: String = UUID().uuidString
-    let name: String = ""
-    let nickName: String = ""
-    let email: String = ""
-    let password: String = ""
-    let gender: String = ""
-    let age: String = ""
-    let favoriteGenre: [String] = []
+struct User: Codable {
+    let id: String
+    let name: String
+    let nickName: String
+    let email: String
+    let password: String
+    let gender: String
+    let age: String
+    let favoriteGenre: [String]
 }
