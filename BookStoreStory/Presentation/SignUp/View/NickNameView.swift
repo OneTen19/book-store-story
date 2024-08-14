@@ -10,6 +10,10 @@ import SwiftUI
 struct NickNameView: View {
     @StateObject var viewModel = NickNameViewViewModel()
     
+    @Binding var name: String
+    @Binding var email: String
+    @Binding var password: String
+    
     var body: some View {
         ScrollView{
             VStack{
@@ -134,7 +138,7 @@ struct NickNameView: View {
                         .clipShape(.buttonBorder)
                 }
                 .navigationDestination(isPresented: $viewModel.nextButtonTapped) {
-                    TastePickerView()
+                    TastePickerView(name: $name, email: $email, password: $password, nickName: $viewModel.nickName, gender: $viewModel.gender, age: $viewModel.age)
                 }
                 
                 
@@ -144,9 +148,5 @@ struct NickNameView: View {
         }
     }
     
-}
-
-#Preview {
-    NickNameView()
 }
 

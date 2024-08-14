@@ -6,18 +6,22 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 class MainViewViewModel : ObservableObject {
-    @Published var stateToggle: Bool = false
+    @Published var currentUserId: String = ""
+    private var handler: AuthStateDidChangeListenerHandle?
     
-    public var isSignedIn: Bool {
-        return stateToggle
-        
-//        return Auth.auth().currentUser != nil
+    init() {
+        self.handler = Auth.auth().addStateDidChangeListener { [weak self] _, user in
+            DispatchQueue.main.async {
+                self?.currentUserId = user?.uid ?? ""
+            }
+        }
     }
     
-    func toggle() {
-        stateToggle.toggle()
+    public var isSignedIn: Bool {
+        return Auth.auth().currentUser != nil
     }
     
 }

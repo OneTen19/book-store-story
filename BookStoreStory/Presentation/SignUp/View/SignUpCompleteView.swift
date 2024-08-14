@@ -11,6 +11,14 @@ struct SignUpCompleteView: View {
     
     @StateObject var viewModel = SignUpCompleateViewViewModel()
     
+    @Binding var name: String
+    @Binding var email: String
+    @Binding var password: String
+    @Binding var nickName: String
+    @Binding var gender: String
+    @Binding var age: String
+    @Binding var favoriteGenre: [String]
+    
     var body: some View {
         
         VStack{
@@ -51,8 +59,8 @@ struct SignUpCompleteView: View {
             
             // 종료 버튼 - 여기서 유저 정보를 보낼지 이 전 단계에서 보낼 지 흠... 여기서 보내자
             Button {
-                viewModel.next()
-                viewModel.endButtonTapped = true
+                viewModel.signUpCompleteButton(name: name, email: email, password: password, nickName: nickName, gender: gender, age: age, favoriteGenre: favoriteGenre)
+                
             } label: {
                 Text("다음")
                     .foregroundStyle(.white)
@@ -71,7 +79,3 @@ struct SignUpCompleteView: View {
     }
 }
 
-
-#Preview {
-    SignUpCompleteView()
-}

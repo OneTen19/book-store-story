@@ -28,7 +28,7 @@ struct EmailView: View {
                         .bold()
                     
                     
-                    TextField("이름 입력", text: $viewModel.name)
+                    TextField("예) 홍길동", text: $viewModel.name)
                         .padding()
                         .background(Color("SignUpTextFieldColor"))
                         .clipShape(.buttonBorder)
@@ -61,6 +61,7 @@ struct EmailView: View {
                         .foregroundStyle(Color("SignUpTextColor"))
                         .bold()
                         .shadow(radius: 2)
+                        .textContentType(.emailAddress)
                         .textInputAutocapitalization(TextInputAutocapitalization(.none))
 
                     
@@ -90,7 +91,7 @@ struct EmailView: View {
                                     .padding(.trailing)
                             }
                         } else {
-                            SecureField("비밀번호 입력", text: $viewModel.password)
+                            SecureField("비밀번호를 6자리 이상 입력해주세요", text: $viewModel.password)
                             
                             Button {
                                 viewModel.passwordToggle.toggle()
@@ -154,7 +155,7 @@ struct EmailView: View {
                         .clipShape(.buttonBorder)
                 }
                 .navigationDestination(isPresented: $viewModel.nextButtonTapped) {
-                    NickNameView()
+                    NickNameView(name: $viewModel.name, email: $viewModel.email, password: $viewModel.password)
                 }
                 
                 

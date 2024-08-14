@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import FirebaseAuth
 
 class LoginViewViewModel: ObservableObject {
     @Published var path: NavigationPath = .init()
@@ -27,6 +28,8 @@ class LoginViewViewModel: ObservableObject {
     func login() {
         guard validate() else {return}
         
+        // Try Log In
+        Auth.auth().signIn(withEmail: email, password: password)
     }
     
     
@@ -45,6 +48,9 @@ class LoginViewViewModel: ObservableObject {
             
             return false
         }
+        
+        // 아이디 비밀번호가 서버에 존재하지 않을때
+        // errorMessage = "계정 정보가 일치하지 않습니다"
         
         return true
     }

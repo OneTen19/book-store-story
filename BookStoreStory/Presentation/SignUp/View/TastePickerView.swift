@@ -11,6 +11,13 @@ struct TastePickerView: View {
 
     @StateObject var viewModel = TastePickerViewViewModel()
     
+    @Binding var name: String
+    @Binding var email: String
+    @Binding var password: String
+    @Binding var nickName: String
+    @Binding var gender: String
+    @Binding var age: String
+    
     var body: some View {
         
         ScrollView {
@@ -78,7 +85,7 @@ struct TastePickerView: View {
                     .clipShape(.buttonBorder)
             }
             .navigationDestination(isPresented: $viewModel.nextButtonTapped) {
-                SignUpCompleteView()
+                SignUpCompleteView(name: $name, email: $email, password: $password, nickName: $nickName, gender: $gender, age: $age, favoriteGenre: $viewModel.favoriteGenre)
             }
             
             
@@ -86,10 +93,5 @@ struct TastePickerView: View {
 
 
     }
-}
-
-
-#Preview {
-    TastePickerView()
 }
 
