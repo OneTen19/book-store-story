@@ -26,7 +26,11 @@ class LoginViewViewModel: ObservableObject {
         guard validate() else {return}
         
         // Try Log In
-        Auth.auth().signIn(withEmail: email, password: password)
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            if authResult == nil {
+                self.errorMessage = "계정 정보가 일치하지 않습니다"
+            }
+        }
         
         
     }
@@ -47,9 +51,6 @@ class LoginViewViewModel: ObservableObject {
             
             return false
         }
-        
-        // 아이디 비밀번호가 서버에 존재하지 않을때
-        // errorMessage = "계정 정보가 일치하지 않습니다"
         
         return true
     }

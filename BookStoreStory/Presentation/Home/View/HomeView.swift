@@ -9,19 +9,38 @@ import SwiftUI
 import FirebaseAuth
 
 struct HomeView: View {
+    @StateObject var viewModel = HomeViewViewModel()
+    
     var body: some View {
-        Text("Home View")
-        
-        Button {
-            do {
-                try Auth.auth().signOut()
-            } catch {
-                print(error)
+        VStack{
+            
+            
+            Spacer()
+            
+            Text("Home View")
+            
+            Spacer()
+            
+            // 로그아웃
+            Button {
+                viewModel.logOut()
+            } label: {
+                Text("로그아웃")
             }
-        } label: {
-            Text("log out")
+            
+            Spacer()
+            
+            
+            // 회원 탈퇴
+            Button {
+                viewModel.deleteUser()
+            } label: {
+                Text("회원 탈퇴")
+            }
+            
+            
+            
         }
-
     }
 }
 
