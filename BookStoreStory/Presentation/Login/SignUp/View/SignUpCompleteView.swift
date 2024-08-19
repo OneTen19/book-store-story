@@ -48,7 +48,7 @@ struct SignUpCompleteView: View {
                         .font(.title3)
 
                     
-                    Text("로그인 후 이용해주세요!!")
+                    Text("당신의 이야기를 들려주세요!!")
                         .font(.title3)
                 }
 
@@ -62,7 +62,7 @@ struct SignUpCompleteView: View {
                 viewModel.signUpCompleteButton(name: name, email: email, password: password, nickName: nickName, gender: gender, age: age, favoriteGenre: favoriteGenre)
                 
             } label: {
-                Text("다음")
+                Text("완료")
                     .foregroundStyle(.white)
                     .bold()
                     .padding(EdgeInsets(top: 15, leading: 150, bottom: 15, trailing: 150))

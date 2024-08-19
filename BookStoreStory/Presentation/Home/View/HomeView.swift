@@ -14,7 +14,6 @@ struct HomeView: View {
     var body: some View {
         VStack{
             
-            
             Spacer()
             
             Text("Home View")

@@ -13,6 +13,10 @@ class HomeViewViewModel: ObservableObject {
     
     init() {}
     
+    
+    
+    
+    
     // 로그아웃
     func logOut() {
         do {
