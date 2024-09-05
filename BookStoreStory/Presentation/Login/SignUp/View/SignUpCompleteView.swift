@@ -60,7 +60,6 @@ struct SignUpCompleteView: View {
             // 종료 버튼 - 여기서 유저 정보를 보낼지 이 전 단계에서 보낼 지 흠... 여기서 보내자
             Button {
                 viewModel.signUpCompleteButton(name: name, email: email, password: password, nickName: nickName, gender: gender, age: age, favoriteGenre: favoriteGenre)
-                
             } label: {
                 Text("완료")
                     .foregroundStyle(.white)
@@ -68,9 +67,6 @@ struct SignUpCompleteView: View {
                     .padding(EdgeInsets(top: 15, leading: 150, bottom: 15, trailing: 150))
                     .background(.brown)
                     .clipShape(.buttonBorder)
-            }
-            .navigationDestination(isPresented: $viewModel.endButtonTapped) {
-                LoginView()
             }
             
             

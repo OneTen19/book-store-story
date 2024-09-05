@@ -92,6 +92,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		6C42CCDB2C896B840016F0E4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6CA08A732C5C650000840BDA /* BookStoreStoryApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6C42CCDC2C896BDF0016F0E4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6C5A29202C60AC5900E0B8BC /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		6C44E5912C72D54900344F81 /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,10 +299,12 @@
 		6CA08A722C5C650000840BDA /* BookStoreStory */ = {
 			isa = PBXGroup;
 			children = (
-				6CC4B6962C5C94BC0074934D /* Other */,
-				6CC4B6952C5C75BD0074934D /* Resources */,
-				6C1BC29B2C64975600880B0E /* Models */,
+				6C42CCDB2C896B840016F0E4 /* App */,
 				6C5675542C61AF1000FE03A3 /* Presentation */,
+				6C1BC29B2C64975600880B0E /* Models */,
+				6C42CCDC2C896BDF0016F0E4 /* Extensions */,
+				6CA08A772C5C650100840BDA /* Assets.xcassets */,
+				6C9E16E52C6AF25F00E65DDF /* GoogleService-Info.plist */,
 				6CA08A792C5C650100840BDA /* Preview Content */,
 			);
 			path = BookStoreStory;
@@ -371,24 +389,6 @@
 				6CBAE6DA2C65F162004956D1 /* HomeView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		6CC4B6952C5C75BD0074934D /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				6CA08A772C5C650100840BDA /* Assets.xcassets */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		6CC4B6962C5C94BC0074934D /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				6C9E16E52C6AF25F00E65DDF /* GoogleService-Info.plist */,
-				6CA08A732C5C650000840BDA /* BookStoreStoryApp.swift */,
-				6C5A29202C60AC5900E0B8BC /* Extensions.swift */,
-			);
-			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
