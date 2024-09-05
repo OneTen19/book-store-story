@@ -19,10 +19,11 @@ class SignUpCompleateViewViewModel: ObservableObject {
     var gender: String = ""
     var age: String = ""
     var favoriteGenre: [String] = []
-
+    
     init() {}
     
     func signUpCompleteButton(name: String, email: String, password: String, nickName: String, gender: String, age: String, favoriteGenre: [String]) {
+        
         
         // 파이어베이스에 유저 생성 - 이메일과 패스워드를 기반으로 만드는 creteuser 기능
         Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
@@ -31,7 +32,7 @@ class SignUpCompleateViewViewModel: ObservableObject {
             // 유저 정보에 이메일과 패스워드밖에 안들어있으니 내가 넣고 싶은 값들 넣는 기능
             self?.insertUserRecord(id: userId)
         }
-
+        
         self.name = name
         self.nickName = nickName
         self.email = email
@@ -41,17 +42,17 @@ class SignUpCompleateViewViewModel: ObservableObject {
         self.favoriteGenre = favoriteGenre
         
         endButtonTapped = true
+        
+        
     }
     
     
-    private func insertUserRecord(id: String){
+    private func insertUserRecord(id: String) {
         let newUser = User(id: id, name: name, nickName: nickName, email: email, password: password, gender: gender, age: age, favoriteGenre: favoriteGenre)
         
-            let db = Firestore.firestore()
-
-            db.collection("users")
-                .document(id)
-                .setData(newUser.asDictionary())
+        guard let encodedUser = try? Firestore.Encoder().encode(newUser) else { return }
+        
+        Firestore.firestore().collection("users").document(newUser.id).setData(encodedUser)
     }
     
     
